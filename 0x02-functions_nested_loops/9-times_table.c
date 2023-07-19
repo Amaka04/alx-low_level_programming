@@ -1,40 +1,27 @@
 #include "main.h"
+#include <stdio.h>
 /**
- * times_table - a function that prints the 9
- * times table
- *
- * Description: it prints it followed by , and 2 spaces
- *
+ * times_table - prints the 9 times table, starting with 0
+ * Return: Void
  */
 void times_table(void)
 {
-	int i, j, k;
+	int i, j, result;
 
-	for (i = 0; j <= 9; j++)
+	for (i = 0 ; i < 10 ; i++)
 	{
-		_putchar('0');
-		_putchar(',');
-		_putchar(' ');
-
-		for (j = 0; j <= 9; j++)
+		for (j = 0 ; j < 10 ; j++)
 		{
-			k = (i * j);
-
-			if ((k / 10) > 0)
-			{
-				_putchar((k / 10) +  '0');
-			}
+			result = i * j;
+			if (j == 0)
+				printf("%d, ", result);
 			else
 			{
-				_putchar(' ');
-			}
-				_putchar((k % 10) + '0');
-			if (j < 9)
-			{
-				_putchar(',');
-				_putchar(' ');
+				printf("%2d", result);
+				if (j != 9)
+					printf(", ");
 			}
 		}
-		_putchar('\n');
+		printf("\n");
 	}
 }
