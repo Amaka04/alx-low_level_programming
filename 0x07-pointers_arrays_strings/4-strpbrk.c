@@ -1,24 +1,37 @@
 #include "main.h"
 
 /**
- * _strpbrk - locates the first occurrence in the string
- * @s: string
- * @accept: string to search from
- * Return: NULL
- */
-char *_strpbrk(char *s, char *accept)
-{
-	unsigned int i, j;
+ * _strpbrk - Entry point
+ * @s: input
+ * @accept: input
+ * Return: Always 0 (Success)
+*/
 
-	for (i = 0; s[i]; i++)
+char *_strpbrk(char *s, char *accept)
+
+{
+
+	int k;
+
+
+	while (*s)
+
 	{
-		for (j = 0; s[j]; j++)
+
+		for (k = 0; accept[k]; k++)
+
 		{
-			if (s[i] == accept[j])
-			{
-				return (s + i);
-			}
+
+			if (*s == accept[k])
+
+				return (s);
+
 		}
+
+		s++;
+
 	}
-	return (NULL);
+
+	return ('\0');
+
 }
