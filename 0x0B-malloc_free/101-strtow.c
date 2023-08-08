@@ -31,7 +31,7 @@ char **strtow(char *str)
 		if (str[c] != ' ' && (str[c + 1] == ' ' || str[c + 1] == '\0'))
 		height++;
 	{
-		aout = malloc((height + 1) * sizeof(char));
+		aout = malloc((height + 1) * sizeof(char *));
 	}
 		if (aout == NULL || height == 0)
 		{
@@ -57,6 +57,7 @@ char **strtow(char *str)
 		}
 		for (j = 0; a1 <= c; a1++, j++)
 			aout[i][j] = str[a1];
+		aout[i][j] = '\0';
 	}
 	aout[i] = (NULL);
 	return (aout);
