@@ -1,11 +1,11 @@
-#include "dog.h"
 #include <stdlib.h>
+#include "dog.h"
 /**
  * new_dog - new dog to be created
- * @name: name of the new dog
- * @age: age of the new dog
- * @owner: owner of the new dog
- * Return: pointer to the new dog
+ * @name: name of  dog
+ * @age: age of dog
+ * @owner: owner of dog
+ * Return: pointer to a new dog
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
@@ -35,7 +35,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	dog->owner = malloc(o1 * sizeof(char));
 	if (dog->owner == NULL)
 	{
-		free(dog->owner);
+		free(dog->name);
 		free(dog);
 		return (NULL);
 	}
