@@ -4,6 +4,7 @@
  *
  * @f: variable to hold the string name
  * @name: name of person
+ * Return: nothing
  */
 void print_name(char *name, void (*f)(char *))
 {
